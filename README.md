@@ -50,6 +50,12 @@ and [licensing details](docs/development.md#license-and-contributions).
 
 [Version 1.1.0 release notes](docs/release-notes-1.1.0.md).
 
+## Screenshots
+
+| Telegram music library | Music player | Offline listening |
+| --- | --- | --- |
+| <img src="docs/images/telegram-library.jpg" width="240" alt="GramMusic Home with Telegram music and recently played songs"> | <img src="docs/images/music-player.jpg" width="240" alt="GramMusic full-screen music player with artwork and playback controls"> | <img src="docs/images/offline-library.jpg" width="240" alt="GramMusic chat music collection with download controls and saved songs"> |
+
 ## Build your own copy
 
 ### Requirements
