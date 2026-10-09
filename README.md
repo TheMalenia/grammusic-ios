@@ -2,6 +2,11 @@
 
 **Your Telegram music, organized into a music library.**
 
+[![Download GramMusic on the App Store](https://img.shields.io/badge/App_Store-Download-000000?style=for-the-badge&logo=apple&logoColor=white)](https://apps.apple.com/us/app/grammusic/id6804196304)
+[![Telegram channel: @GramMusicApp](https://img.shields.io/badge/Telegram-%40GramMusicApp-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/GramMusicApp)
+
+Follow [@GramMusicApp](https://t.me/GramMusicApp) for GramMusic news and release updates.
+
 GramMusic is a native iPhone music player for audio accessible through your own Telegram
 account: channels, groups, personal chats, Saved Messages, and profile music. Import the
 sources you want, build playlists, and listen with a dedicated player instead of hunting
