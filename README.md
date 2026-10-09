@@ -19,8 +19,12 @@ and [licensing details](docs/development.md#license-and-contributions).
 
 ## Features
 
-- **A unified library:** playlists, imported Telegram chats, followed artists, profile
-  playlists, favorites, downloads, pinning, sorting, and recent listening.
+- **Create your own playlists:** collect songs from Telegram chats and search results,
+  organize them into playlists, and manage their contents.
+- **Follow artists:** keep artists in your Library and open a dedicated artist page that
+  brings together their music found across your Telegram chats.
+- **A unified library:** imported Telegram chats, profile playlists, favorites, downloads,
+  pinning, sorting, and recent listening.
 - **Music search:** a dedicated Search page and shortcuts on Home and Library; local
   collection search; optional user-connected inline music bots with custom names and
   query prefixes, automatic bot pagination, and bounded retries.
