@@ -93,10 +93,11 @@ identities resolve to TheMalenia on GitHub. Local documentation links resolve, b
 fonts retain their OFL notices, and demo audio has documented CC0 provenance.
 
 GitHub secret scanning and push protection are enabled; no open secret-scanning alerts
-were reported. Dependabot alerts are disabled, so the audit cannot claim that GitHub
-has checked all dependency vulnerabilities. Direct queries of GitHub's reviewed Swift
+were reported. Dependency vulnerability alerts are now enabled and report no open
+alerts. Direct queries of GitHub's reviewed Swift
 advisories for the pinned Firebase and TDLibKit versions returned no matches; that does
-not cover every transitive or native binary dependency. The legacy development repository is private
+not cover every transitive or native binary dependency, or establish complete dependency
+graph coverage for the XcodeGen project. The legacy development repository is private
 and remains separate; its historical credentials still need a maintainer review.
 
 The final export excludes the test setup file and generated project. Pattern scans do
