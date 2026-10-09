@@ -1,0 +1,53 @@
+# Secrets — never commit real Telegram credentials
+Config/Secrets.xcconfig
+
+# Xcode
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+xcuserdata/
+DerivedData/
+build/
+*.xcuserstate
+*.xcscmblueprint
+
+# Swift Package Manager
+.swiftpm/
+.build/
+Package.resolved
+
+# XcodeGen output (regenerate with `xcodegen generate`)
+Telepofy.xcodeproj/
+
+# macOS
+.DS_Store
+
+# Reviewer demo session — contains REAL TDLib auth keys, never commit
+GramMusic/ReviewerSession.bundle/
+DerivedData/
+
+# Vendored Telegram source (1.3 GB reference checkout)
+telegram/
+.module-cache/
+
+# Build output
+build.log
+
+# Private environment, Firebase configuration, and signing material
+.env
+.env.*
+!.env.example
+!.env.sample
+**/GoogleService-Info.plist
+**/*service-account*.json
+*.p12
+*.p8
+*.mobileprovision
+*.pem
+*.key
+public-source/
+
+# Python helper cache
+__pycache__/
+
+# Generate locally from project.yml
+GramMusic.xcodeproj/

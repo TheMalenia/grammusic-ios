@@ -1,0 +1,51 @@
+GramMusic Personal Use Source-Available License 1.0
+
+Copyright (c) 2026 GramMusic copyright holders.
+
+1. Scope
+This license applies only to code, documentation, and assets for which the GramMusic
+copyright holders have authority to grant permission. Third-party software and assets
+remain subject to their respective licenses and notices.
+
+2. Personal-use permission
+You may inspect, download, copy, compile, install, run, and privately modify the licensed
+material solely for your own personal, noncommercial use on devices you own or control.
+You may retain personal backup copies. This permission does not extend to use for an
+employer, organization, client, commercial activity, or a service provided to others.
+
+3. Uses requiring written permission
+Unless separately authorized in writing by the copyright holders, you may not:
+(a) sell, rent, sublicense, or commercially exploit the licensed material;
+(b) distribute or publish copies, modified versions, binaries, or derivative products;
+(c) release a build through an app store, TestFlight, a download site, or another
+    distribution service, or offer hosted functionality based on this project;
+(d) use the licensed material for organizational or client work.
+A platform's independent rights under its applicable hosting terms and rights required
+by law are not restricted by this license. Those rights do not grant broader permission
+to distribute builds, commercialize the project, or operate a service.
+
+4. Notices and branding
+Retain this license and existing copyright and third-party notices in personal copies.
+No trademark rights or permission to represent your build as an official GramMusic
+release are granted. No rights beyond the permissions expressly stated are granted.
+
+5. Contributions
+You may submit proposed patches to the official GramMusic repository. By submitting a
+patch, you grant the project copyright holders a perpetual, worldwide, nonexclusive,
+royalty-free right to use, modify, distribute, and sublicense that contribution as part
+of the project. You retain ownership of your contribution and must have the authority
+to grant these rights. This is not permission to publish a separate product.
+
+6. Termination
+Permissions end if you violate these terms. Stop using and distributing the licensed
+material after termination. Statutory rights are unaffected.
+
+7. Disclaimer
+THE LICENSED MATERIAL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT. TO THE EXTENT PERMITTED BY LAW, THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ARE NOT LIABLE FOR CLAIMS OR DAMAGES ARISING FROM ITS USE.
+
+8. Additional permission
+Request written permission for any broader use at grammusic@proton.me. Permission must
+come from a copyright holder authorized to grant it; silence is not permission.
