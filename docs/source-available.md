@@ -79,7 +79,10 @@ only placeholder Telegram values and no Firebase configuration. All 367 unit tes
 the app-launch UI smoke test passed. The audit fixed bulk-download ownership when a
 transfer is also needed by playback, including cancellation once playback moves on.
 Main-actor timeout tasks now explicitly declare sendability; the tested Debug build
-produced no compiler warnings. The UI smoke test checks launch only, not visual layout
+produced no compiler warnings. The Release simulator build also succeeded with zero
+compiler warnings or errors. Both built app bundles report version 1.1.0, contain only
+placeholder Telegram values, and have no Firebase client configuration. The UI smoke
+test checks launch only, not visual layout
 or every interaction. The manual checklist remains necessary for device QA and live
 Telegram/inline-bot behavior.
 
