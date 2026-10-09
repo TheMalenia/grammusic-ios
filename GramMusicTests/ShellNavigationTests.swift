@@ -127,7 +127,8 @@ final class ShellNavigationTests: XCTestCase {
         try await settle(host)
         let tabs = try XCTUnwrap(tabController(in: host))
         let chatTab = tabs.selectedViewController
-        navigation.path = [1]
+        NScopedSearchTransition.setPresented(true, using: Binding(
+            get: { navigation.showSearch }, set: { navigation.showSearch = $0 }))
         try await settle(host)
         let localField = try XCTUnwrap(searchField(in: host.view), "Chat search exposes the regular search field")
         XCTAssertTrue(localField.isFirstResponder)
@@ -159,15 +160,14 @@ final class ShellNavigationTests: XCTestCase {
 
         localField.becomeFirstResponder()
         try await settle(host)
-        XCTAssertTrue(localField.isFirstResponder, "Restore the keyboard before exercising the native close button")
+        XCTAssertTrue(localField.isFirstResponder, "Restore the keyboard before exercising the page close button")
         let nav = try XCTUnwrap(navigationController(in: try XCTUnwrap(tabs.selectedViewController)))
-        let item = try XCTUnwrap(nav.navigationBar.topItem)
-        let items = (item.rightBarButtonItems ?? []) + item.trailingItemGroups.flatMap(\.barButtonItems)
-        let close = try XCTUnwrap(items.last, "The page close button must remain available while typing")
-        let action = try XCTUnwrap(close.action)
-        XCTAssertTrue(UIApplication.shared.sendAction(action, to: close.target, from: close, for: nil))
+        XCTAssertTrue(nav.isNavigationBarHidden, "Scoped search must preserve the collection's hidden system bar")
+        let close = try XCTUnwrap(accessibilityElement("search.close", in: host.view),
+                                  "The page close button must remain available while typing")
+        XCTAssertTrue(close.accessibilityActivate(), "Activate the same X action exposed to VoiceOver")
         try await settle(host)
-        XCTAssertEqual(navigation.path, [], "One X tap must pop the page, including while the keyboard is active")
+        XCTAssertFalse(navigation.showSearch, "One X tap must close the page, including while the keyboard is active")
         XCTAssertTrue(tabs.selectedViewController === chatTab)
         XCTAssertNotNil(tabs.bottomAccessory)
     }
@@ -285,6 +285,20 @@ final class ShellNavigationTests: XCTestCase {
         return view.subviews.flatMap { self.searchFields(in: $0) }
     }
 
+    private func accessibilityElement(_ identifier: String, in object: NSObject) -> NSObject? {
+        if let view = object as? UIView, view.isHidden || view.alpha == 0 { return nil }
+        if let identified = object as? UIAccessibilityIdentification,
+           identified.accessibilityIdentifier == identifier { return object }
+        for element in object.accessibilityElements ?? [] {
+            if let child = element as? NSObject, child !== object,
+               let match = accessibilityElement(identifier, in: child) {
+                return match
+            }
+        }
+        guard let view = object as? UIView else { return nil }
+        return view.subviews.lazy.compactMap { self.accessibilityElement(identifier, in: $0) }.first
+    }
+
     private func verticalScrollView(in view: UIView) -> UIScrollView? {
         if let scroll = view as? UIScrollView, scroll.contentSize.height > scroll.bounds.height + 1 {
             return scroll
@@ -303,7 +317,7 @@ final class ShellNavigationTests: XCTestCase {
 
 @MainActor @Observable
 private final class LocalSearchNavigationState {
-    var path: [Int] = []
+    var showSearch = false
 }
 
 @available(iOS 26.1, *)
@@ -316,12 +330,13 @@ private struct LocalSearchNavigationFixture: View {
     var body: some View {
         TabView {
             Tab("Library", systemImage: "books.vertical") {
-                NavigationStack(path: $state.path) {
+                NavigationStack {
                     Text("Chat songs")
                         .toolbar(.hidden, for: .navigationBar)
-                        .navigationDestination(for: Int.self) { _ in
+                        .navigationDestination(isPresented: $state.showSearch) {
                             NSearchView(localScope: .init(title: "My channel", tracks: tracks, context: "My channel"),
-                                        isTab: true, embeddedInNavigation: true, onClose: { state.path = [] })
+                                        isTab: true, embeddedInNavigation: true,
+                                        onClose: { NScopedSearchTransition.setPresented(false, using: $state.showSearch) })
                         }
                 }
             }

@@ -5,8 +5,8 @@ build number, iPhone model, and iOS version. Test a small playlist and a large c
 
 ## Search transition regression
 
-- [ ] Tap Find in chat, playlist, artist, and profile playlist. The page slides in
-  smoothly; the keyboard opens after the page appears, without a second layout jump.
+- [ ] Tap Find in chat, playlist, artist, and profile playlist. Search opens directly
+  without a sideways slide; the keyboard opens after the page appears, without a layout jump.
 - [ ] Repeat opening and closing each search ten times, with playback stopped,
   playing, and paused. Watch for flashing backgrounds or duplicated bottom controls.
 - [ ] Close immediately during opening, then reopen. No late keyboard appears on
@@ -50,8 +50,14 @@ build number, iPhone model, and iOS version. Test a small playlist and a large c
 - [ ] Run the unit tests on the phone, including `SearchAppearanceTests` and
   `ShellNavigationTests`. The appearance regression checks that keyboard requests
   wait for completed presentation. These tests do not measure animation smoothness.
+- [ ] Before archiving, restore the existing App Store bundle ID `com.grammusic.player`
+  and its distribution signing team. The `.app` ID is for local phone testing; its
+  widget extension must use the same bundle prefix.
+- [ ] Use the Firebase configuration registered for the archive's bundle ID. The
+  local `.app` configuration does not confirm correct `.player` registration; obtain
+  the matching file from Firebase Console. Keep the real file ignored.
 - [ ] Archive the Release configuration and validate it in Xcode Organizer. Verify
-  real credentials are configured and no Telegram account session is bundled.
+  real Telegram credentials are configured and no Telegram account session is bundled.
 - [ ] Upload via App Store Connect distribution, add the processed build to an
   internal TestFlight group, and install that build on your phone. Repeat the smoke tests.
 - [ ] Select the tested build on the 1.1.0 App Store version page, add
@@ -64,14 +70,18 @@ and [version/build numbers](https://help.apple.com/xcode/mac/current/en.lproj/de
 
 ## Verification of this search fix
 
-The search field previously requested focus from SwiftUI `onAppear`, during the
-navigation push. It now waits for the native completed-appearance callback, without
-a fixed delay. Each redraw also shares one song-filtering pass between results and
-selection instead of doing the work twice.
+Scoped search opens directly and closes with X using a transaction that disables
+navigation animation. Its Search title and close button stay inside the page, and
+collection/search pages keep the system navigation bar hidden. Keyboard focus waits
+for completed appearance; results and selection reuse one song-filtering pass.
 
-The new appearance adapter and its lifecycle test were typechecked against the iPhoneOS
-SDK in isolation; changed Swift files passed syntax and whitespace checks. This is not a
-full app build or a test run. Simulator and device tests were not run for this change;
-the Simulator remains stopped. The earlier test/build results
-in [development](development.md) predate this fix. Physical-device animation testing,
-the Release archive, and upload remain release gates.
+On October 9, 2026, the maintainer confirmed the issue was fixed on their phone after
+switching Xcode to the maintained checkout. The older Xcode window had been using the
+legacy repository, so earlier phone reports did not verify this checkout.
+
+The opening/closing transaction passed a standalone SwiftUI binding harness on macOS.
+The appearance adapter, transition helper, and new tests passed isolated iPhoneOS SDK
+typechecking; changed Swift files passed syntax and whitespace checks. No full app build
+or automated device/Simulator test suite was run by the agent for this follow-up.
+The earlier full test/build results in [development](development.md) predate this fix.
+The remaining release smoke tests, Release archive, and upload still need completion.

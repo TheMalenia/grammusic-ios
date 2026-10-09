@@ -16,11 +16,6 @@ struct NSearchView: View {
     var sharedInput: NSearchInput? = nil
     var onClose: (() -> Void)? = nil
 
-    private var usesNativeSearch: Bool {
-        if #available(iOS 26.1, *) { return isTab && usesNativePlayerAccessory }
-        return false
-    }
-
     struct LocalScope {
         var title: String
         var tracks: [AudioTrack]
@@ -30,7 +25,6 @@ struct NSearchView: View {
 
     @Environment(\.dismiss) private var dismiss
     @Environment(\.theme) private var theme
-    @Environment(\.nUsesNativePlayerAccessory) private var usesNativePlayerAccessory
     @Environment(TelegramService.self) private var telegram
     @Environment(PlayerEngine.self) private var player
 
@@ -89,7 +83,14 @@ struct NSearchView: View {
         let songs = visibleSongs
         NSearchNavigation(ownsStack: !embeddedInNavigation) {
             VStack(spacing: 12) {
-                if !embeddedInNavigation {
+                if embeddedInNavigation {
+                    HStack {
+                        Text("Search").font(.title2.bold()).foregroundStyle(theme.text)
+                            .accessibilityAddTraits(.isHeader)
+                        Spacer()
+                        closeButton
+                    }
+                } else {
                     Text("Search").font(.display(33)).tracking(-0.6).foregroundStyle(theme.text)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
@@ -116,18 +117,11 @@ struct NSearchView: View {
                     .contentShape(Rectangle())
                     .onTapGesture { endEditing() }
             )
-            .toolbar(usesNativeSearch && embeddedInNavigation ? .visible : .hidden, for: .navigationBar)
+            // Collection pages hide the system bar. Showing it only on the destination
+            // animates the top safe-area inset during the push and makes the title jump.
+            .toolbar(.hidden, for: .navigationBar)
             .navigationBarBackButtonHidden(embeddedInNavigation)
-            .modifier(NSearchTabChrome(enabled: usesNativeSearch && embeddedInNavigation, isEmbedded: embeddedInNavigation))
-            .toolbar {
-                if usesNativeSearch && embeddedInNavigation {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button("Close search", systemImage: "xmark", action: closeSearch)
-                            .labelStyle(.iconOnly)
-                            .accessibilityIdentifier("search.close")
-                    }
-                }
-            }
+            .interactiveBackSwipe()
             .onChange(of: input.focusRequest) { _, _ in focused = true }
             .onSubmit(of: .search) {
                 if !trimmed.isEmpty { addRecent(trimmed) }
@@ -224,7 +218,7 @@ struct NSearchView: View {
             .padding(.horizontal, 14).frame(minHeight: SearchChrome.height)
             .nGlass(SearchChrome.shape, theme: theme)
 
-            if !isTab || (embeddedInNavigation && !usesNativeSearch) {
+            if !isTab && !embeddedInNavigation {
                 closeButton
             }
         }

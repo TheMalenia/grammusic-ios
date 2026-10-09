@@ -108,7 +108,10 @@ struct NChatAudioView: View {
                  : "Its music will be removed from your library, search and play queue right away, and you won't see it again.")
         }
         .navigationDestination(isPresented: $showSearch) {
-            NSearchView(localScope: .init(title: chat.title, tracks: sortedTracks, context: chat.title, loadAll: fullCollectionLoader), isTab: true, embeddedInNavigation: true, onClose: { showSearch = false })
+            NSearchView(
+                localScope: .init(title: chat.title, tracks: sortedTracks, context: chat.title, loadAll: fullCollectionLoader),
+                isTab: true, embeddedInNavigation: true,
+                onClose: { NScopedSearchTransition.setPresented(false, using: $showSearch) })
         }
         .task(id: chat.id) { await load() }
         .onAppear { AnalyticsService.logOpenChat() }
@@ -267,7 +270,9 @@ struct NChatAudioView: View {
                     .buttonStyle(NPressable(scale: 0.95))
                 }
                 controlRow
-                SearchBarButton(prompt: "Find in chat") { showSearch = true }
+                SearchBarButton(prompt: "Find in chat") {
+                    NScopedSearchTransition.setPresented(true, using: $showSearch)
+                }
             }
         }
     }

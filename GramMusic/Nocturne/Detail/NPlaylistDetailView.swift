@@ -90,7 +90,10 @@ struct NPlaylistDetailView: View {
         .sheet(item: $actionTarget) { track in NTrackActionsSheet(track: track) }
         .sheet(isPresented: $showEditPlaylist) { NEditPlaylistSheet(playlist: playlist) }
         .navigationDestination(isPresented: $showSearch) {
-            NSearchView(localScope: .init(title: playlist.name, tracks: allTracks, context: playlist.name, loadAll: fullCollectionLoader), isTab: true, embeddedInNavigation: true, onClose: { showSearch = false })
+            NSearchView(
+                localScope: .init(title: playlist.name, tracks: allTracks, context: playlist.name, loadAll: fullCollectionLoader),
+                isTab: true, embeddedInNavigation: true,
+                onClose: { NScopedSearchTransition.setPresented(false, using: $showSearch) })
         }
     }
 
@@ -323,7 +326,9 @@ struct NPlaylistDetailView: View {
             if !playlist.tracks.isEmpty { downloadAllRow }
 
             if playlist.tracks.count > 4 {
-                SearchBarButton(prompt: "Find in \(playlist.name)") { showSearch = true }
+                SearchBarButton(prompt: "Find in \(playlist.name)") {
+                    NScopedSearchTransition.setPresented(true, using: $showSearch)
+                }
             }
 
             if editable && playlist.tracks.count > 1 {

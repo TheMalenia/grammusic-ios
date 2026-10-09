@@ -63,7 +63,10 @@ struct NArtistView: View {
         .sheet(item: $actionTarget) { track in NTrackActionsSheet(track: track) }
         .sheet(item: $reportTarget) { t in NReportSheet(chatId: t.chatId, messageIds: [t.messageId], onDismiss: { reportTarget = nil }) }
         .navigationDestination(isPresented: $showSearch) {
-            NSearchView(localScope: .init(title: artist.name, tracks: tracks, context: artist.name), isTab: true, embeddedInNavigation: true, onClose: { showSearch = false })
+            NSearchView(
+                localScope: .init(title: artist.name, tracks: tracks, context: artist.name),
+                isTab: true, embeddedInNavigation: true,
+                onClose: { NScopedSearchTransition.setPresented(false, using: $showSearch) })
         }
         .task(id: artist.id) { await load() }
     }
@@ -147,7 +150,9 @@ struct NArtistView: View {
             .listRowBackground(Color.clear)
 
         if tracks.count > 4 {
-            SearchBarButton(prompt: "Find in \(artist.name)") { showSearch = true }
+            SearchBarButton(prompt: "Find in \(artist.name)") {
+                NScopedSearchTransition.setPresented(true, using: $showSearch)
+            }
                 .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
                 .listRowSeparator(.hidden)
                 .listRowBackground(Color.clear)

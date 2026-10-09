@@ -76,7 +76,10 @@ struct NProfilePlaylistDetailView: View {
             Text("You won't see their music again, and it will be removed from your library and queue right away.")
         }
         .navigationDestination(isPresented: $showSearch) {
-            NSearchView(localScope: .init(title: profile.title, tracks: sortedTracks, context: profile.title, loadAll: fullCollectionLoader), isTab: true, embeddedInNavigation: true, onClose: { showSearch = false })
+            NSearchView(
+                localScope: .init(title: profile.title, tracks: sortedTracks, context: profile.title, loadAll: fullCollectionLoader),
+                isTab: true, embeddedInNavigation: true,
+                onClose: { NScopedSearchTransition.setPresented(false, using: $showSearch) })
         }
         .task(id: profile.userId) {
             tracks = profile.tracks
@@ -189,7 +192,7 @@ struct NProfilePlaylistDetailView: View {
                 controlRow
 
                 SearchBarButton(prompt: "Find in profile playlist") {
-                    showSearch = true
+                    NScopedSearchTransition.setPresented(true, using: $showSearch)
                 }
             }
         }

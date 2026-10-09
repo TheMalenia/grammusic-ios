@@ -18,6 +18,14 @@ configuration from its console and regenerate after adding it. Never bundle an A
 service-account private key. A client Firebase API key identifies a project and is not an
 administrator secret, but personal builds should still use their own project.
 
+If your local phone build and App Store build use different bundle IDs, register each
+as a separate Apple app in the same Firebase project and use its matching configuration.
+The existing App Store ID is `com.grammusic.player`; local testing may use
+`com.grammusic.app`. Events appearing in Firebase do not by themselves prove the bundle
+ID matches. Before archiving, check the archive's bundle ID against `BUNDLE_ID` in the
+selected plist. See [Firebase's setup guide](https://firebase.google.com/docs/ios/setup).
+The widget extension's bundle ID must also have the current app's bundle ID as its prefix.
+
 Never commit `.env`, real xcconfig values, bot tokens, session databases, private keys,
 or provisioning profiles. The template’s values are placeholders. Do not upload a real
 Telegram session for demo access; the app already has an account-free mock demo.
