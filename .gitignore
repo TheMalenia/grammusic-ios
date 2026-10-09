@@ -44,7 +44,6 @@ build.log
 *.mobileprovision
 *.pem
 *.key
-public-source/
 
 # Python helper cache
 __pycache__/

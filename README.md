@@ -11,10 +11,11 @@ Built with SwiftUI, SwiftData, AVFoundation, and Telegram’s official TDLib thr
 [TDLibKit](https://github.com/Swiftgram/TDLibKit). Supports iOS 17 and later.
 GramMusic is independent and is not affiliated with Telegram, Apple, Spotify, or Deezer.
 
-**Source-available for personal use.** You may build, privately modify, and use the app
-for yourself. Redistribution, commercial or organizational use, app-store releases, and
-services for others require written permission. See [LICENSE](LICENSE). This is not an
-OSI-approved open-source license. Contact **grammusic@proton.me** for broader permissions.
+**Open source under GNU GPL version 2 or later (`GPL-2.0-or-later`).** You may use,
+modify, and redistribute GramMusic, including commercially, under the license terms.
+When distributing a covered build, provide its corresponding source under the GPL and
+retain the required notices. Private changes do not have to be published. See [LICENSE](LICENSE)
+and [licensing details](docs/development.md#license-and-contributions).
 
 ## Features
 
@@ -86,7 +87,8 @@ package downloads needed to build; it is not a package-free build.
 Use your own Apple development team and distinct app/widget bundle identifiers in
 `project.yml`, regenerate, and configure signing for both targets in Xcode. Do not use
 the maintainers’ provisioning profiles. Local project signing changes may be overwritten
-by regeneration. Personal builds are permitted; distributing them requires permission.
+by regeneration. If you distribute a build, comply with the GPL and the distribution
+platform's requirements.
 
 For cross-process widgets, create your own App Group, enable it for the app and widget
 entitlements, and update `WidgetSharedStore.appGroupId` to the same identifier. The
@@ -114,7 +116,7 @@ xcodebuild -project GramMusic.xcodeproj -scheme GramMusic \
 
 The October 9, 2026 public-source verification passed all 367 unit tests and the
 app-launch UI smoke test using placeholder Telegram credentials and no Firebase config.
-See [verification and limits](docs/source-available.md#clean-snapshot-verification--october-9-2026)
+See [verification and limits](docs/development.md#last-verified-build--october-9-2026)
 and the [manual testing checklist](docs/music-search.md).
 Mock/hosted tests do not verify live bot responses or real-device performance.
 
@@ -167,7 +169,7 @@ Official references: [Inline bots](https://core.telegram.org/bots/inline),
 
 ## Documentation and permissions
 
-- [Source publication guide](docs/source-available.md)
+- [Development guide](docs/development.md)
 - [Search guide](docs/music-search.md)
 - [Privacy policy](docs/privacy-policy.md)
 - [TestFlight checklist](docs/testflight-notes.md)
@@ -177,8 +179,8 @@ Telegram credentials, sessions, personal data, Firebase configuration, and signi
 must stay outside the public source. Metadata lookup sends track title/artist information
 to iTunes or LRCLIB; the privacy policy explains the details. Access to Telegram content
 does not grant redistribution rights to the music. Third-party packages and demo media
-retain their own licenses; our personal-use restriction does not replace theirs.
+retain their own licenses; the GPL does not replace their notices or license terms.
 
 For bugs, provide reproduction steps and remove account identifiers, tokens, and private
 chat information from logs. Contact **grammusic@proton.me** for security reports or
-permission to redistribute, publish, or use GramMusic beyond personal use.
+licensing questions.
