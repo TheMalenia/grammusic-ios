@@ -111,6 +111,32 @@ final class DownloadLaneTests: XCTestCase {
         XCTAssertFalse(service.explicitDownloadIds.contains("shared"), "no longer part of the bulk job")
     }
 
+    func test_stoppedBulkDownload_isCancelledWhenPlaybackNoLongerNeedsIt() {
+        let service = makeService()
+        let shared = track("shared")
+        service.downloadAll([shared])
+        service.planPlaybackDownloads([shared])
+        service.stopDownloads([shared])
+
+        XCTAssertEqual(service.downloads.entry("shared")?.isExplicit, false)
+        XCTAssertTrue(service.isDownloading(shared))
+        service.planPlaybackDownloads([])
+        XCTAssertFalse(service.downloads.isQueued("shared"))
+        XCTAssertFalse(service.isDownloading(shared))
+    }
+
+    func test_stopDownloads_keepsUpcomingPlaybackButReleasesBulkOwnership() {
+        let service = makeService()
+        let later = track("later")
+        service.downloadAll([later])
+        service.planPlaybackDownloads([track("playing"), track("next"), later])
+        service.stopDownloads([later])
+
+        XCTAssertTrue(service.downloads.isQueued("later"))
+        XCTAssertFalse(service.isExplicitlyDownloading(later))
+        XCTAssertEqual(service.downloads.entry("later")?.isExplicit, false)
+    }
+
     func test_downloadAll_skipsWhatIsAlreadyOnDisk() {
         let service = makeService()
         service.downloadedIds.insert("have")

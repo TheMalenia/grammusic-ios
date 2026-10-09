@@ -77,18 +77,18 @@ extension TelegramService {
 
     /// Stop the user's bulk download of `tracks`.
     ///
-    /// **Only explicit work**, and never the track playing or queued next: those are downloading
+    /// **Only explicit work**, and never a track in the playback plan: those are downloading
     /// because playback needs them, not because the user pressed Download all, and cancelling them
     /// from a chat screen would interrupt the music. Partial bytes are kept (see
     /// `cancelTransientDownload`) so resuming costs nothing.
     func stopDownloads(_ tracks: [AudioTrack]) {
         for track in tracks where isExplicitlyDownloading(track) {
             let key = track.remoteUniqueId
-            // Playback still needs it — leave it entirely alone. Stripping the explicit flag first
-            // (which is what this did) also dropped its progress ring, and with "Keep everything I
-            // play" on it is the *playing* track that carries that flag.
-            if downloads.entry(key)?.priority.usesPlaybackLane == true { continue }
             explicitDownloadIds.remove(key)
+            downloads.removeExplicitRequest(key)
+            // Playback retains the transfer, but the bulk job no longer owns it. Its progress
+            // ring remains visible when "Keep everything I play" is enabled.
+            if playbackPlanKeys.contains(key) { continue }
             cancelTransientDownload(key: key)
         }
     }
@@ -211,6 +211,7 @@ extension TelegramService {
                     }
                     guard let self, !Task.isCancelled, !self.canceledDownloadIds.contains(key) else { return }
                     downloadLog.info("Downloaded \(track.displayTitle, privacy: .public)")
+                    let explicitlyRequested = self.explicitDownloadIds.contains(key)
                     self.downloads.didFinish(key)
                     self.downloadTasks[key] = nil
                     // **Only what the user asked for is a download.** This passed no `explicit:`
@@ -218,7 +219,7 @@ extension TelegramService {
                     // the Downloaded library — which is exactly the behaviour the cache exists to
                     // replace, so nothing was ever cached and nothing was ever evicted.
                     self.markDownloaded(track,
-                                        explicit: entry.isExplicit || self.autoDownloadPlayed,
+                                        explicit: explicitlyRequested || self.autoDownloadPlayed,
                                         bytes: Self.fileSize(at: url))
                     self.processDownloadQueue()
                 } catch {

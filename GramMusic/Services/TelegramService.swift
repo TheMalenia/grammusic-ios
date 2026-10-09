@@ -1256,15 +1256,10 @@ final class TelegramService {
         }
 
         do {
-            // A deadline has to *race* the work, so the work has to live in a child task — and
-            // handing `addTask` a closure that captures main-actor state is the one thing
-            // region-based isolation still warns about here (`sending` parameter). The child is
-            // `@MainActor`, so it provably runs on the main actor and cannot execute concurrently
-            // with main-actor code; the diagnostic is conservative about the *transfer*, not wrong
-            // about the destination. `@Sendable` and `sending` both "fix" it by stripping the
-            // isolation the body depends on, which is worse. Left as-is deliberately.
+            // Race the sync against its deadline. Explicit sendability allows the task-group
+            // transfer while MainActor isolation keeps model and UI mutations serialized.
             try await withThrowingTaskGroup(of: Void.self, isolation: #isolation) { group in
-                group.addTask { @MainActor [weak self] in
+                group.addTask { @MainActor @Sendable [weak self] in
                     guard let self else { return }
                     // 1. Ensure system library (Favorites, Downloaded, Your Profile) exists in SwiftData
                     if let context = self.modelContext {
@@ -2135,23 +2130,17 @@ final class TelegramService {
     /// **Pick `timeout` to fit the work, not by habit.** A deadline shorter than the job is not a
     /// safety net: the timeout cancels the task group, so the work is *killed midway* as well as
     /// reported as a failure.
-    /// `work` is `@MainActor` rather than a bare closure. It always was in practice — every caller
-    /// is a method on this main-actor type — and saying so is what lets it be handed to
-    /// `group.addTask`: a global-actor-isolated closure **is** `Sendable`, whereas an unannotated
-    /// one would have to be *transferred* out of the main actor's region, which region-based
-    /// isolation rightly refuses. (`@Sendable` and `sending` both look like fixes here and are
-    /// not: they strip the main-actor isolation the body depends on.)
+    /// `work` stays on the main actor; explicit sendability permits safely transferring it to
+    /// the task group without removing the isolation its UI and model mutations depend on.
     @discardableResult
     func run(policy: Retry.Policy = .none,
              timeout: Duration = .seconds(15),
              surface: FailureSurface = .user,
-             _ work: @escaping @MainActor () async throws -> Void) async -> Bool {
+             _ work: @escaping @MainActor @Sendable () async throws -> Void) async -> Bool {
         do {
             try await Retry.run(policy) {
                 try await withThrowingTaskGroup(of: Void.self, isolation: #isolation) { group in
-                    // `@MainActor in` explicitly: `work` is main-actor isolated, and saying so
-                    // here makes the child closure Sendable rather than something to be transferred.
-                    group.addTask { @MainActor in try await work() }
+                    group.addTask { @MainActor @Sendable in try await work() }
                     group.addTask {
                         try await Task.sleep(for: timeout)
                         throw TelegramError.transient("Connection timed out. Please check your internet or VPN connection and try again.")

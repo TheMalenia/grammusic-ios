@@ -16,12 +16,7 @@ settings:
     MARKETING_VERSION: "1.1.0"
     CURRENT_PROJECT_VERSION: "1"
     DEVELOPMENT_TEAM: N5H5JFAU3Q   # baked in so `xcodegen generate` keeps signing
-    # `minimal` is what let two real data races compile: the TDLib `client` being swapped from a
-    # main-actor task while read from other threads, and the audio tap mutating filter state on the
-    # render thread while the control thread wrote it under a lock. Both are fixed; `targeted`
-    # keeps them from coming back. `complete` currently trips a compiler
-    # "failed to produce diagnostic" bug on two SwiftUI expressions — worth retrying on a later
-    # toolchain, as there are no genuine concurrency errors left under it.
+    # Check actor isolation and sendability throughout the app, including task-group closures.
     SWIFT_STRICT_CONCURRENCY: complete
 
 packages:

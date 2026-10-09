@@ -209,12 +209,12 @@ final class DownloadScheduler {
             dropped.append(entry.key)
             return true
         }
-        // In-flight downloads that were only running because playback wanted them, and no longer
-        // are. (The two active sets are disjoint, so this deliberately checks the lane set — the
-        // shared pool holds bulk work, which the play queue moving on must never cancel.)
-        for key in activePlaybackKeys.subtracting(planKeys)
-        where inFlight[key]?.isExplicit != true {
-            dropped.append(key)
+        // Playback can occupy either lane, including a bulk transfer promoted while running.
+        // Ownership, rather than the occupied slot, decides whether moving on cancels it.
+        for (key, entry) in inFlight where !entry.isExplicit && !planKeys.contains(key) {
+            if entry.priority.usesPlaybackLane || entry.priority == .upcoming {
+                dropped.append(key)
+            }
         }
 
         for (index, track) in ordered.enumerated() {
@@ -222,6 +222,17 @@ final class DownloadScheduler {
             submit(track, priority: priority, now: now)
         }
         return dropped
+    }
+
+    /// Release bulk ownership without interrupting a transfer playback still needs.
+    func removeExplicitRequest(_ key: String) {
+        if let index = pending.firstIndex(where: { $0.key == key }) {
+            pending[index].isExplicit = false
+        }
+        if var entry = inFlight[key] {
+            entry.isExplicit = false
+            inFlight[key] = entry
+        }
     }
 
     /// Forget a track entirely (cancelled, removed, or already on disk).
