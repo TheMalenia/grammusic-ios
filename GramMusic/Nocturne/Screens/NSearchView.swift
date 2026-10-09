@@ -84,6 +84,9 @@ struct NSearchView: View {
     }
 
     var body: some View {
+        // Share one matching pass between the results and selection toolbar. Focus and
+        // navigation updates can redraw this view several times during presentation.
+        let songs = visibleSongs
         NSearchNavigation(ownsStack: !embeddedInNavigation) {
             VStack(spacing: 12) {
                 if !embeddedInNavigation {
@@ -92,14 +95,14 @@ struct NSearchView: View {
                 }
                 searchBar
                 if effectiveLocal != nil {
-                    resultList.padding(.horizontal, -16)
+                    resultList(songs: songs).padding(.horizontal, -16)
                 } else {
                     sourceTabs
                     if trimmed.isEmpty {
                         recentsList
                     } else {
                         if source.isTelegram { scopeChips }
-                        resultList.padding(.horizontal, -16)
+                        resultList(songs: songs).padding(.horizontal, -16)
                     }
                 }
             }
@@ -140,19 +143,26 @@ struct NSearchView: View {
             }
             .onChange(of: selection.isSelecting) { _, selecting in if selecting { endEditing() } }
             .onChange(of: scope) { _, _ in selection.cancel() }
-            .trackSelection(tracks: visibleSongs, selection: selection, loadAll: fullCollectionLoader)
+            .trackSelection(tracks: songs, selection: selection, loadAll: fullCollectionLoader)
             .modifier(NSearchOverlayPresentation(isTab: isTab, showNowPlaying: $showNowPlaying,
                 onExpand: { endEditing(); showNowPlaying = true }))
+        }
+        .background {
+            NSearchAppearanceObserver(onReady: focusInitially)
+                .frame(width: 0, height: 0)
+                .accessibilityHidden(true)
         }
         .onDisappear { focused = false }
         .onAppear {
             if sourceID == nil { sourceID = telegram.searchSources.defaultSourceID }
-            if !hasFocusedInitially {
-                hasFocusedInitially = true
-                if !isTab || embeddedInNavigation { focused = true }
-                AnalyticsService.logOpenSearch()
-            }
         }
+    }
+
+    private func focusInitially() {
+        guard !hasFocusedInitially else { return }
+        hasFocusedInitially = true
+        if !isTab || embeddedInNavigation { focused = true }
+        AnalyticsService.logOpenSearch()
     }
 
     /// Telegram-style horizontal filter bar (replaces the iOS segmented control).
@@ -295,8 +305,8 @@ struct NSearchView: View {
         }
     }
 
-    private var resultList: some View {
-        NSearchResultsView(songs: visibleSongs, query: trimmed, source: source, scope: scope,
+    private func resultList(songs: [AudioTrack]) -> some View {
+        NSearchResultsView(songs: songs, query: trimmed, source: source, scope: scope,
                            localContext: effectiveLocal?.context, controller: controller,
                            onCommit: commit, onRetry: { refreshRequested = true; retryToken += 1 },
                            onLoadMore: { await controller.loadMore { source, query, offset in

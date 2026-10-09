@@ -75,5 +75,7 @@ This license does not grant rights to other people's music or trademark rights.
 
 These results describe the checks performed that day. The UI smoke test verifies launch,
 not every interaction; live Telegram and physical-device behavior need manual testing.
+The subsequent scoped-search transition fix has separate verification limits and
+[phone release gates](release-checklist-1.1.0.md); the results above do not cover that fix.
 Use the [manual testing checklist](music-search.md) for affected flows. Builds and tests
 do not need to run again for a documentation-only change.

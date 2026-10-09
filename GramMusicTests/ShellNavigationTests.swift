@@ -116,8 +116,7 @@ final class ShellNavigationTests: XCTestCase {
             .environment(NActionFeedback()).modelContainer(container)
             .environment(\.theme, ThemeMode.day.resolve(systemScheme: .light, accent: .default,
                                                        brand: .nocturne, artwork: .gradient))
-            .preferredColorScheme(.light)
-            .transaction { $0.disablesAnimations = true })
+            .preferredColorScheme(.light))
         let scene = try XCTUnwrap(UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.first)
         let window = UIWindow(windowScene: scene)
         window.frame = CGRect(x: 0, y: 0, width: 393, height: 852)
@@ -319,6 +318,7 @@ private struct LocalSearchNavigationFixture: View {
             Tab("Library", systemImage: "books.vertical") {
                 NavigationStack(path: $state.path) {
                     Text("Chat songs")
+                        .toolbar(.hidden, for: .navigationBar)
                         .navigationDestination(for: Int.self) { _ in
                             NSearchView(localScope: .init(title: "My channel", tracks: tracks, context: "My channel"),
                                         isTab: true, embeddedInNavigation: true, onClose: { state.path = [] })

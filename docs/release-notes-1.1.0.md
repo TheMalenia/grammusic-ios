@@ -38,6 +38,7 @@ and version creation in [Create a new version](https://developer.apple.com/help/
 
 - [Search behavior and verification](music-search.md)
 - [TestFlight testing checklist](testflight-notes.md)
+- [Phone regression tests and release gates](release-checklist-1.1.0.md)
 - [Current features](../README.md)
 
 The version number is configured in `project.yml` and synchronized with the current

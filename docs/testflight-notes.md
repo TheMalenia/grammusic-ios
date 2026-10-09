@@ -2,6 +2,9 @@
 
 Paste the text below into App Store Connect → TestFlight → What to Test.
 
+For the search transition fix and release gates, use the
+[phone and release checklist](release-checklist-1.1.0.md).
+
 ---
 
 This build improves search, lyrics, bottom navigation, selection, and large-chat shuffle.
@@ -14,6 +17,8 @@ This build improves search, lyrics, bottom navigation, selection, and large-chat
 - Chat, playlist, artist and profile searches stay inside their navigation stack, share
   the bottom controls, and close with X even while typing. Long results scroll behind
   the tabs and mini-player while the last row remains reachable.
+  Keyboard focus waits until the search page finishes appearing, reducing competing
+  keyboard and navigation animations when opening scoped search.
 - Bot searches load more automatically and use bounded retries for transient failures.
   Error messages distinguish connection problems from a bot not responding. There is
   no Open bot in Telegram action.
