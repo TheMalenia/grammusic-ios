@@ -19,8 +19,9 @@ Each connected bot can have an optional **Display name**. Leave it empty to use
 `@username`. The name appears in tabs, the source list and search status;
 it does not change the bot's Telegram identity.
 
-The connection field also accepts a fixed query prefix: `@musicbot music` connects
-`@musicbot` and sends `music Halo` when the user searches for `Halo`. Prefixes are
+The connection field also accepts a fixed query prefix: `@your_music_bot music` connects
+`@your_music_bot` and sends `music Halo` when the user searches for `Halo`. The username
+is a placeholder for a bot you choose. Prefixes are
 applied once to every page and retry. They are not added to the search text displayed
 to the user or to other sources' queries. Open a connected bot's **⋯ → Edit source** menu to
 change its display name or prefix later. Clearing either field removes that setting.
@@ -160,7 +161,7 @@ The picker/animation and bot-timeout follow-up passes the simulator build and al
 architecture and Swift batches capped at 25 files. The raw 502 presentation was
 reproduced with the real controller and a deterministic failed fetch. Saved Messages
 context, bounded retry, cancellation, rate limits and presentation reset are covered
-without contacting a bot. The reported live Deezer timeout still needs an on-device
+without contacting a bot. The reported live inline-bot timeout still needs an on-device
 retest; a bot's server response cannot be confirmed by these fixtures.
 
 The display-name/query-prefix follow-up passes the memory-conscious simulator build
@@ -189,11 +190,11 @@ real bot responses and physical-device interaction still need the checks below.
 ### Manual checks with a Telegram account
 
 1. Confirm Telegram search and local playlist search still behave as before.
-2. Connect `@Deezermusicbot` or another available inline music bot. Confirm one tab
+2. Connect an available inline music bot of your choice. Confirm one tab
    appears and a repeated connection does not add a duplicate.
 3. Give a bot a display name, confirm it appears in the tab and source list, then
    clear it and confirm the username returns. Connect or edit a bot with the `music`
-   prefix and verify its result for a known query against `@bot music <query>` in Telegram.
+   prefix and verify its result for a known query against `@your_music_bot music <query>` in Telegram.
 4. Choose it as the default, close search, reopen global search, then relaunch the app.
 5. Search for a song and switch between Telegram and bot tabs. Confirm the text
    stays unchanged and rows belong to the selected source.

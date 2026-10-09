@@ -14,7 +14,7 @@ through chat messages.
 
 Built with SwiftUI, SwiftData, AVFoundation, and Telegram’s official TDLib through
 [TDLibKit](https://github.com/Swiftgram/TDLibKit). Supports iOS 17 and later.
-GramMusic is independent and is not affiliated with Telegram, Apple, Spotify, or Deezer.
+GramMusic is independent and is not affiliated with Telegram or Apple.
 
 **Open source under GNU GPL version 2 or later (`GPL-2.0-or-later`).** You may use,
 modify, and redistribute GramMusic, including commercially, under the license terms.
@@ -138,7 +138,7 @@ Mock/hosted tests do not verify live bot responses or real-device performance.
 ## Inline music bots
 
 An **inline bot** is a Telegram bot that responds to a query such as
-`@your_bot song title` with selectable results inside another chat. Some bots return
+`@your_music_bot song title` with selectable results inside another chat. Some bots return
 playable audio; others return text, images, or links. GramMusic shows accessible audio
 results as songs and uses the selected bot as a search source. It does not send a result
 to a chat merely to play it. Queries go only to the selected source.
