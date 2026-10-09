@@ -1,0 +1,1563 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@" : {
+
+    },
+    "%@ GB" : {
+
+    },
+    "%@ replied, but this page has no playable audio. Try another search or choose a different source." : {
+
+    },
+    "%@ selected · %@ tracks" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ selected · %2$@ tracks"
+          }
+        }
+      }
+    },
+    "%@ tracks" : {
+
+    },
+    "+ %@ more" : {
+
+    },
+    "±12 dB" : {
+
+    },
+    "About" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حول"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acerca de"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "درباره"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О приложении"
+          }
+        }
+      }
+    },
+    "Accent color" : {
+
+    },
+    "Add a Telegram bot's music search to your app." : {
+
+    },
+    "Add to Playlist" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إضافة إلى قائمة التشغيل"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir a lista de reproducción"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "افزودن به پلی‌لیست"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить в плейлист"
+          }
+        }
+      }
+    },
+    "Added to Favorites" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "به علاقه‌مندی‌ها اضافه شد"
+          }
+        }
+      }
+    },
+    "Added to queue" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "به صف پخش اضافه شد"
+          }
+        }
+      }
+    },
+    "Adding to playlist…" : {
+
+    },
+    "Additional details" : {
+
+    },
+    "AirPlay" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AirPlay"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AirPlay"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ایرپلی"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AirPlay"
+          }
+        }
+      }
+    },
+    "Appearance" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المظهر"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apariencia"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ظاهر و تم"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Внешний вид"
+          }
+        }
+      }
+    },
+    "Audio quality" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جودة الصوت"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calidad de audio"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "کیفیت صدا"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Качество звука"
+          }
+        }
+      }
+    },
+    "Automatically add songs listed in search to a Search playlist in your Library. Turning this off keeps songs already saved." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آهنگ‌های نمایش‌داده‌شده در جستجو به‌صورت خودکار به فهرست پخش جستجو در کتابخانه اضافه می‌شوند. با خاموش کردن این گزینه، آهنگ‌های ذخیره‌شده باقی می‌مانند."
+          }
+        }
+      }
+    },
+    "Back to current line" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بازگشت به خط فعلی"
+          }
+        }
+      }
+    },
+    "By continuing you agree to our" : {
+
+    },
+    "Cancel" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إلغاء"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لغو"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отмена"
+          }
+        }
+      }
+    },
+    "Change Phone Number" : {
+
+    },
+    "Checking for lyrics…" : {
+
+    },
+    "Choose an output device for playback." : {
+
+    },
+    "Choose which audio-bearing chats and profile playlists appear in your Library." : {
+
+    },
+    "Clear all" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پاک کردن همه"
+          }
+        }
+      }
+    },
+    "Clear cache" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مسح ذاكرة التخزين المؤقت"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar caché"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پاکسازی حافظه موقت (کش)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очистить кэш"
+          }
+        }
+      }
+    },
+    "Clear Search playlist?" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فهرست پخش جستجو پاک شود؟"
+          }
+        }
+      }
+    },
+    "Confirm your country code and enter your phone number to connect your Telegram." : {
+
+    },
+    "Couldn't join from here — opening Telegram works too." : {
+
+    },
+    "Create “%@”" : {
+
+    },
+    "Describe a playlist and I'll build it from your own library." : {
+
+    },
+    "Done" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listo"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انجام شد"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Готово"
+          }
+        }
+      }
+    },
+    "Downloaded" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم التنزيل"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descargado"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دانلود شده‌ها"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загружено"
+          }
+        }
+      }
+    },
+    "Downloaded tracks play offline and appear here." : {
+
+    },
+    "Downloading… %@%%" : {
+
+    },
+    "End of queue." : {
+
+    },
+    "Enter Code" : {
+
+    },
+    "Enter Password" : {
+
+    },
+    "Equalizer" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المعادل الصوتي"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ecualizador"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اکولایزر"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Эквалайзер"
+          }
+        }
+      }
+    },
+    "Favorites" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المفضلة"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favoritos"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "علاقه‌مندی‌ها"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Избранное"
+          }
+        }
+      }
+    },
+    "Files are deleted from this device. You can download them again later." : {
+
+    },
+    "FREQUENCY RESPONSE" : {
+
+    },
+    "Gapless playback" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تشغيل بدون فواصل"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reproducción continua"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پخش بدون وقفه"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Плавный переход"
+          }
+        }
+      }
+    },
+    "Generating..." : {
+
+    },
+    "GramMusic" : {
+
+    },
+    "GramMusic can't delete your Telegram account — manage or delete it on Telegram's website." : {
+
+    },
+    "GramMusic never messages your contacts. It only changes your Telegram account when you ask it to — profile music, joining a channel, reporting or blocking a source." : {
+
+    },
+    "Hidden" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پنهان"
+          }
+        }
+      }
+    },
+    "Hidden songs" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آهنگ‌های پنهان"
+          }
+        }
+      }
+    },
+    "Hide song" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پنهان کردن آهنگ"
+          }
+        }
+      }
+    },
+    "Hide songs" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پنهان کردن آهنگ‌ها"
+          }
+        }
+      }
+    },
+    "Hint: %@" : {
+
+    },
+    "Hold a song to select · tap Reorder to arrange songs." : {
+
+    },
+    "Home" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الرئيسية"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicio"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خانه"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Главная"
+          }
+        }
+      }
+    },
+    "Import a chat or follow an artist, and I can put playlists together from them." : {
+
+    },
+    "Import a Telegram chat to start listening." : {
+
+    },
+    "in your chats" : {
+
+    },
+    "Library" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المكتبة"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biblioteca"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "کتابخانه"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Медиатека"
+          }
+        }
+      }
+    },
+    "Loading… (%@ remaining)" : {
+
+    },
+    "Log out" : {
+
+    },
+    "Log Out" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تسجيل الخروج"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar sesión"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خروج از حساب"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выйти"
+          }
+        }
+      }
+    },
+    "Lyrics" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الكلمات"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Letra"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متن ترانه"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Текст песни"
+          }
+        }
+      }
+    },
+    "Lyrics preview" : {
+
+    },
+    "Manage chats" : {
+
+    },
+    "Music saved on this device" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "موسیقی ذخیره‌شده روی این دستگاه"
+          }
+        }
+      }
+    },
+    "New" : {
+
+    },
+    "New to Telegram? Learn how to register" : {
+
+    },
+    "News, releases and fixes — announced there first." : {
+
+    },
+    "Next Track" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المسار التالي"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pista siguiente"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آهنگ بعدی"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Следующий трек"
+          }
+        }
+      }
+    },
+    "No audio in this chat." : {
+
+    },
+    "No audio on this profile." : {
+
+    },
+    "No hidden songs" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هیچ آهنگی پنهان نشده است"
+          }
+        }
+      }
+    },
+    "No lyrics available" : {
+
+    },
+    "No lyrics found" : {
+
+    },
+    "No results for “%@”" : {
+
+    },
+    "Nothing to build from yet" : {
+
+    },
+    "Open Chat" : {
+
+    },
+    "Optional" : {
+
+    },
+    "Pause" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إيقاف مؤقت"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pausa"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توقف"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пауза"
+          }
+        }
+      }
+    },
+    "Phone number" : {
+
+    },
+    "Play" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تشغيل"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reproducir"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پخش"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Воспроизвести"
+          }
+        }
+      }
+    },
+    "Play Next" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پخش بعدی"
+          }
+        }
+      }
+    },
+    "Playback" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التشغيل"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reproducción"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پخش صدا"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Воспроизведение"
+          }
+        }
+      }
+    },
+    "Playback position" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "موقعیت پخش"
+          }
+        }
+      }
+    },
+    "PLAYING FROM" : {
+
+    },
+    "Playing next" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "در ادامه پخش می‌شود"
+          }
+        }
+      }
+    },
+    "Playlists" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قوائم التشغيل"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listas de reproducción"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پلی‌لیست‌ها"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Плейлисты"
+          }
+        }
+      }
+    },
+    "PRESETS" : {
+
+    },
+    "Profile · %@ track%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Profile · %1$@ track%2$@"
+          }
+        }
+      }
+    },
+    "Queue" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قائمة الانتظار"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cola"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صف پخش"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очередь"
+          }
+        }
+      }
+    },
+    "Recent searches" : {
+
+    },
+    "Recently played" : {
+
+    },
+    "Recently Played" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم تشغيلها مؤخراً"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escuchado recientemente"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اخیراً پخش شده"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Недавно прослушано"
+          }
+        }
+      }
+    },
+    "Remove from playlist" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حذف از فهرست پخش"
+          }
+        }
+      }
+    },
+    "Removed from Favorites" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "از علاقه‌مندی‌ها حذف شد"
+          }
+        }
+      }
+    },
+    "Removed from playlist" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "از فهرست پخش حذف شد"
+          }
+        }
+      }
+    },
+    "Report message" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "گزارش پیام"
+          }
+        }
+      }
+    },
+    "Report messages from their song menu. Leave and Block are in chat menus. Restore hidden songs here, and hidden chats from the import screen." : {
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پیام‌ها را از منوی آهنگ گزارش کنید. ترک و مسدودسازی در منوی گفتگوها هستند. آهنگ‌های پنهان را اینجا و گفتگوهای پنهان را از صفحهٔ وارد کردن برگردانید."
+          }
+        }
+      }
+    },
+    "Report Submitted" : {
+
+    },
+    "Resend code" : {
+
+    },
+    "Resend code in 0:%@" : {
+
+    },
+    "Reset to Flat" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إعادة التعيين إلى مسطح"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restablecer a plano"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنظیم مجدد به حالت اولیه"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сбросить на Flat"
+          }
+        }
+      }
+    },
+    "Save search results" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ذخیرهٔ نتایج جستجو"
+          }
+        }
+      }
+    },
+    "Save songs played from search" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ذخیرهٔ آهنگ‌های شنیده‌شده از جستجو"
+          }
+        }
+      }
+    },
+    "Search" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بحث"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جستجو"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск"
+          }
+        }
+      }
+    },
+    "Search playlist options" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "گزینه‌های فهرست پخش جستجو"
+          }
+        }
+      }
+    },
+    "Search settings" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنظیمات جستجو"
+          }
+        }
+      }
+    },
+    "Search your music" : {
+
+    },
+    "Searching %@…" : {
+
+    },
+    "See all" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مشاهده همه"
+          }
+        }
+      }
+    },
+    "Select track" : {
+
+    },
+    "Sending a new code…" : {
+
+    },
+    "Settings" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإعدادات"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustes"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنظیمات"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
+          }
+        }
+      }
+    },
+    "Share" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مشاركة"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compartir"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اشتراک‌گذاری"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поделиться"
+          }
+        }
+      }
+    },
+    "Show lyrics" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إظهار الكلمات"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar letra"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نمایش متن ترانه"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показывать текст"
+          }
+        }
+      }
+    },
+    "Shuffle" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خلط"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aleatorio"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پخش تصادفی"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перемешать"
+          }
+        }
+      }
+    },
+    "Songs you hide will appear here. Unhide them to allow playback again." : {
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آهنگ‌های پنهان‌شده اینجا نمایش داده می‌شوند. برای پخش دوباره، آن‌ها را نمایان کنید."
+          }
+        }
+      }
+    },
+    "Songs you listen to from search appear here when Save songs played from search is enabled." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "با فعال کردن ذخیرهٔ آهنگ‌های شنیده‌شده از جستجو، آهنگ‌هایی که از جستجو گوش می‌دهید اینجا نمایش داده می‌شوند."
+          }
+        }
+      }
+    },
+    "Songs you listen to from search are saved to the Search playlist in your Library. Turning this off keeps songs already saved." : {
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آهنگ‌هایی که از جستجو گوش می‌دهید در فهرست پخش جستجو در کتابخانه ذخیره می‌شوند. با خاموش کردن این گزینه، آهنگ‌های ذخیره‌شده باقی می‌مانند."
+          }
+        }
+      }
+    },
+    "Stop following lyrics" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توقف دنبال کردن متن ترانه"
+          }
+        }
+      }
+    },
+    "Storage" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مساحة التخزين"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Almacenamiento"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حافظه و ذخیره‌سازی"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Хранилище"
+          }
+        }
+      }
+    },
+    "Stream while downloading" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البث أثناء التنزيل"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transmitir mientras se descarga"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پخش استریم همزمان با دانلود"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стриминг во время загрузки"
+          }
+        }
+      }
+    },
+    "Submit" : {
+
+    },
+    "Tap a source to make it your default. You can switch tabs while searching." : {
+
+    },
+    "Telegram inline bots can return music files. We use those files as search results. Choose where Home search starts below." : {
+
+    },
+    "Terms of Use" : {
+
+    },
+    "Thank you for your report." : {
+
+    },
+    "The player your music deserves" : {
+
+    },
+    "These songs are hidden. Unhide them to play again." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "این آهنگ‌ها پنهان شده‌اند. برای پخش، آن‌ها را دوباره نمایان کنید."
+          }
+        }
+      }
+    },
+    "This clears saved search listening history. New songs you listen to from search can still be saved while the setting is enabled." : {
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "این کار سابقهٔ شنیدن آهنگ‌ها از جستجو را پاک می‌کند. اگر این گزینه فعال باشد، آهنگ‌های جدیدی که از جستجو می‌شنوید همچنان ذخیره می‌شوند."
+          }
+        }
+      }
+    },
+    "This removes your playlists, downloads, imported chats, and listening history from this device." : {
+
+    },
+    "This track is no longer on Telegram, so removing the download deletes your only copy." : {
+
+    },
+    "This track was deleted from Telegram. If you remove the downloaded file, you won't be able to play or download it again." : {
+
+    },
+    "Try a song title, an artist name, or a different spelling." : {
+
+    },
+    "Two-step verification keeps your account secure." : {
+
+    },
+    "Unhide" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نمایش دوباره"
+          }
+        }
+      }
+    },
+    "Unhide song" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نمایش دوبارهٔ آهنگ"
+          }
+        }
+      }
+    },
+    "Unsupported message" : {
+
+    },
+    "Version" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإصدار"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versión"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نسخه"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия"
+          }
+        }
+      }
+    },
+    "View queue" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نمایش صف پخش"
+          }
+        }
+      }
+    },
+    "You can connect your own Telegram inline music bot to add it as a search source." : {
+
+    },
+    "You won't see their music again, and it will be removed from your library and queue right away." : {
+
+    },
+    "You're offline. Music saved on this device is available." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آفلاین هستید. موسیقی ذخیره‌شده روی این دستگاه در دسترس است."
+          }
+        }
+      }
+    },
+    "You're offline. Search currently includes only music saved on this device." : {
+
+    },
+    "Your Phone Number" : {
+
+    },
+    "Your sources" : {
+
+    }
+  },
+  "version" : "1.0"
+}
