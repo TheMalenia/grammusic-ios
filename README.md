@@ -112,8 +112,10 @@ xcodebuild -project GramMusic.xcodeproj -scheme GramMusic \
   -only-testing:GramMusicTests CODE_SIGNING_ALLOWED=NO test
 ```
 
-The last complete test run executed 365 tests: 364 passed, with one pre-existing
-`DownloadLaneTests` explicit-download flag failure. See [verification](docs/music-search.md).
+The October 9, 2026 public-source verification passed all 367 unit tests and the
+app-launch UI smoke test using placeholder Telegram credentials and no Firebase config.
+See [verification and limits](docs/source-available.md#clean-snapshot-verification--october-9-2026)
+and the [manual testing checklist](docs/music-search.md).
 Mock/hosted tests do not verify live bot responses or real-device performance.
 
 ## Inline music bots

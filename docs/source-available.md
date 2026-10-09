@@ -75,8 +75,27 @@ Repeat a dedicated secret scan before publishing additional history or new files
 ## Clean-snapshot verification — October 9, 2026
 
 The exported snapshot generated an Xcode project and built on the iOS Simulator using
-only placeholder Telegram values and no Firebase configuration. All four
-`ShellNavigationTests` passed, including launch of the unconfigured app test host. The
-final export excludes the test setup file and generated project. Selected credential
-patterns found no matches in the exported source. This does not validate live Telegram
-responses or certify that a pattern scan detects every possible sensitive value.
+only placeholder Telegram values and no Firebase configuration. All 367 unit tests and
+the app-launch UI smoke test passed. The audit fixed bulk-download ownership when a
+transfer is also needed by playback, including cancellation once playback moves on.
+Main-actor timeout tasks now explicitly declare sendability; the tested Debug build
+produced no compiler warnings. The UI smoke test checks launch only, not visual layout
+or every interaction. The manual checklist remains necessary for device QA and live
+Telegram/inline-bot behavior.
+
+The new public repository's six initial commits contained 210 reachable blobs. Selected
+credential patterns found no matches, and no private Firebase config, real xcconfig,
+session database, or signing material was committed. All six author and committer
+identities resolve to TheMalenia on GitHub. Local documentation links resolve, bundled
+fonts retain their OFL notices, and demo audio has documented CC0 provenance.
+
+GitHub secret scanning and push protection are enabled; no open secret-scanning alerts
+were reported. Dependabot alerts are disabled, so the audit cannot claim that GitHub
+has checked all dependency vulnerabilities. Direct queries of GitHub's reviewed Swift
+advisories for the pinned Firebase and TDLibKit versions returned no matches; that does
+not cover every transitive or native binary dependency. The legacy development repository is private
+and remains separate; its historical credentials still need a maintainer review.
+
+The final export excludes the test setup file and generated project. Pattern scans do
+not prove that every possible sensitive value has been found. These checks do not
+validate live Telegram responses, physical-device signing, or App Store approval.
